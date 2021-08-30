@@ -11,11 +11,13 @@ jobs:
           command: npm install
       - run:
           name: Run tests
-          command: npm test
+          command: jest --ci --runInBand --reporters=default --reporters=jest-junit
+          environment:
+            JEST_JUNIT_OUTPUT_DIR: ./reports/junit/
       - store_test_results:
-          path: ./junit.xml
+          path: ./reports/junit/
       - store_artifacts:
-          path: ./junit.xml
+          path: ./reports/junit
 
 workflows:
   test:
