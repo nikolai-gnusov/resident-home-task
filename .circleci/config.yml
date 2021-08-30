@@ -12,7 +12,7 @@ jobs:
           command: npm install
       - run:
           name: Run tests
-          command: npm run jestci
+          command: npm run testci
           environment:
             JEST_JUNIT_OUTPUT_DIR: ./reports/junit/
       - store_test_results:
