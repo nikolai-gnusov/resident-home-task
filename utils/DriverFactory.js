@@ -5,7 +5,6 @@ class DriverFactory {
     createDriver(browserName, capabilities) {
 
         let driver;
-        browserName = 'headlesschrome';
 
         switch (browserName.toLowerCase()) {
            case 'chrome':
