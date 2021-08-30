@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: circleci/node:15
       #- selenium / standalone-chrome: 3.11.0
-    parallelism: 2
+    parallelism: 1
     steps:
       - checkout
       - run:
