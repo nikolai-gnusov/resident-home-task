@@ -1,6 +1,6 @@
 const DriverFactory = require('../utils/DriverFactory');
 const EnvConstants = require('../utils/EnvConstants');
-const HomePage = require('../pages/homePage');
+const HomePage = require('../pages/HomePage');
 const LoginPage = require('../pages/LoginPage');
 const AccountPage = require('../pages/AccountPage');
 
