@@ -5,6 +5,7 @@ class DriverFactory {
     createDriver(browserName, capabilities) {
 
         let driver;
+        browserName = 'headlesschrome';
 
         switch (browserName.toLowerCase()) {
            case 'chrome':
@@ -14,11 +15,11 @@ class DriverFactory {
                 break;
             case 'headlesschrome':
                 let options   = new chrome.Options();
-                options.addArguments('--headless'); // note: without dashes
-                options.addArguments('--disable-gpu')
-                options.addArguments('--no-sandbox')
-                options.addArguments('--single-process')
-                options.addArguments('--disable-dev-shm-usage')
+                options.addArguments('headless'); // note: without dashes
+                options.addArguments('disable-gpu')
+                options.addArguments('no-sandbox')
+                options.addArguments('single-process')
+                options.addArguments('disable-dev-shm-usage')
 
                driver = new webdriver.Builder()
                    .forBrowser('chrome')
