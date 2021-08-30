@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run:
           name: Install Chrome
-          command: wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo apt-get install -fy google-chrome-stable_current_amd64.deb
+          command: apt-get install chromium
       - run:
           name: Get dependencies
           command: npm install
