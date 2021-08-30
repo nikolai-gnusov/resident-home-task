@@ -3,7 +3,7 @@ const EnvConstants = require('../utils/EnvConstants');
 const HomePage = require('../pages/HomePage');
 const LoginPage = require('../pages/LoginPage');
 const AccountPage = require('../pages/AccountPage');
-
+/*
 describe('UI tests (automationpractice.com)', () => {
     let driver;
 
@@ -36,3 +36,5 @@ describe('UI tests (automationpractice.com)', () => {
         await driver.quit();
     },10000);
 });
+
+*/

@@ -12,13 +12,11 @@ jobs:
           command: npm install
       - run:
           name: Run tests
-          command: npm run testci
-          environment:
-            JEST_JUNIT_OUTPUT_DIR: ./reports/junit/
+          command: npm run test
       - store_test_results:
-          path: ./reports/junit/
+          path: ./junit.xml
       - store_artifacts:
-          path: ./reports/junit
+          path: ./junit.xml
 
 workflows:
   test:

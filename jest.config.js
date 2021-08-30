@@ -1,4 +1,3 @@
 module.exports = {
-    //testResultsProcessor: "jest-allure-reporter",
-    //reporters: [ "default", "jest-junit" ]
+    reporters: [ "default", "jest-junit"]
 }
