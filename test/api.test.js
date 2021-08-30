@@ -19,9 +19,10 @@ describe('API tests (https://reqres.in/)', () => {
     });
 
     test('Get user (GET)', async () => {
-        let respData = await reqResApi.get("users/"+EnvConstants.api_user_id);
+        let userId = parseInt(EnvConstants.api_user_id);
+        let respData = await reqResApi.get("users/"+userId);
 
-        expect(respData.data.id).toEqual(EnvConstants.api_user_id);
+        expect(respData.data.id).toEqual(userId);
         expect(respData.data.email).toEqual(EnvConstants.api_user_email);
     });
 
@@ -53,16 +54,15 @@ describe('API tests (https://reqres.in/)', () => {
 
         let respData = await reqResApi.delete("users/"+EnvConstants.api_user_id);
 
-        console.log(respData);
         expect(respData).toBeNull();
     });
 });
 
     function generateString(length) {
-        var result           = '';
-        var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        var charactersLength = characters.length;
-        for ( var i = 0; i < length; i++ ) {
+        let result           = '';
+        let characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let charactersLength = characters.length;
+        for ( let i = 0; i < length; i++ ) {
             result += characters.charAt(Math.floor(Math.random() *
                 charactersLength));
         }

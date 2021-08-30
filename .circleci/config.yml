@@ -12,6 +12,10 @@ jobs:
       - run:
           name: Run tests
           command: npm test
+      - store_test_results:
+          path: ./junit.xml
+      - store_artifacts:
+          path: ./junit.xml
 
 workflows:
   test:
@@ -21,3 +25,5 @@ workflows:
             branches:
               only:
                 - main
+
+
