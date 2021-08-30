@@ -8,13 +8,12 @@ describe('UI tests (automationpractice.com)', () => {
     let driver;
 
     beforeAll( async () => {
-        jest.setTimeout(30000);
+        jest.setTimeout(60000);
         driver = DriverFactory.createDriver(EnvConstants.browser, {});
         await driver.get(EnvConstants.ui_base_url, 10000);
-    },30000);
+    },60000);
 
     test('Successful login', async () => {
-
         let homePage = new HomePage(driver);
         await homePage.goLogin();
 
@@ -26,7 +25,7 @@ describe('UI tests (automationpractice.com)', () => {
         expect(await accountPage.isLoaded()).toBe(true)
     });
 
-    test('Successful logout using UI', async () => {
+   test('Successful logout using UI', async () => {
         let accountPage = new AccountPage(driver);
         await accountPage.goLogout();
 
@@ -35,5 +34,5 @@ describe('UI tests (automationpractice.com)', () => {
 
     afterAll(async () => {
         await driver.quit();
-    },30000);
+    },60000);
 });
