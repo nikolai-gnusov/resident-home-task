@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "testci": "jest --ci --runInBand --reporters=default --reporters=jest-junit"
   },
   "devDependencies": {
     "chromedriver": "^74.0.0",

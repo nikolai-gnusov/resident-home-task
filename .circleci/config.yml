@@ -4,6 +4,7 @@ jobs:
   test_app:
     docker:
       - image: circleci/node:15
+    parallelism: 2
     steps:
       - checkout
       - run:
@@ -11,7 +12,7 @@ jobs:
           command: npm install
       - run:
           name: Run tests
-          command: jest --ci --runInBand --reporters=default --reporters=jest-junit
+          command: npm run jestci
           environment:
             JEST_JUNIT_OUTPUT_DIR: ./reports/junit/
       - store_test_results:
