@@ -1,14 +1,26 @@
 const webdriver  = require('selenium-webdriver');
+const chrome  = require('selenium-webdriver/chrome')
 
 class DriverFactory {
     createDriver(browserName, capabilities) {
 
-        // temporary override
-        capabilities = { }
-        let driver = new webdriver.Builder()
-            .withCapabilities(capabilities)
-            .forBrowser(browserName)
-            .build();
+        let driver;
+
+        switch (browserName.toLowerCase()) {
+           case 'chrome':
+               driver = new webdriver.Builder()
+                   .forBrowser('chrome')
+                   .build();
+                break;
+           case 'headlesschrome':
+               driver = new webdriver.Builder()
+                   .forBrowser('chrome')
+                   .setChromeOptions(new chrome.Options().headless())
+                   .build();
+                break;
+       }
+
+
         return driver;
     }
 }

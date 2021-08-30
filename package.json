@@ -1,11 +1,12 @@
 {
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "testci": "browser=headlesschrome && jest"
   },
   "devDependencies": {
     "chromedriver": "^92.0.1",
     "jest": "^27.0.6",
-    "selenium-webdriver": "3.6.0",
+    "selenium-webdriver": "4.0.0-beta.4",
     "jest-junit": "^12.2.0"
   }
 }
