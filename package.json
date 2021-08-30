@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test": "jest",
-    "testci": "jest --reporters=default --reporters=jest-junit"
+    "testci": "jest"
   },
   "devDependencies": {
     "chromedriver": "^74.0.0",
