@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test": "jest",
-    "testci": "browser=headlesschrome && jest"
+    "testci": "export browser=headlesschrome && jest"
   },
   "devDependencies": {
     "chromedriver": "^92.0.1",
