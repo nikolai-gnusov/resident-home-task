@@ -4,7 +4,7 @@ jobs:
   test_app:
     docker:
       - image: circleci/node:15
-    parallelism: 2
+    #parallelism: 2
     steps:
       - checkout
       - run:
