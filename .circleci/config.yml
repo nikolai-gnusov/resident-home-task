@@ -4,12 +4,17 @@ jobs:
   test_app:
     docker:
       - image: circleci/node:15
+      #- selenium / standalone-chrome: 3.11.0
     parallelism: 2
     steps:
       - checkout
       - run:
           name: Get dependencies
           command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-deps{{ checksum "package.json" }}
       - run:
           name: Run tests
           command: npm run test
@@ -26,5 +31,3 @@ workflows:
             branches:
               only:
                 - main
-
-
