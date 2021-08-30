@@ -12,7 +12,7 @@ jobs:
           name: Install Chrome
           command: |
             wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-            dpkg -i google-chrome-stable_current_amd64.deb; apt-get -fy install
+            apt install -fy google-chrome-stable_current_amd64.deb
       - run:
           name: Get dependencies
           command: npm install
