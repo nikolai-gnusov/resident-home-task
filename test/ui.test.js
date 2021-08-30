@@ -3,14 +3,15 @@ const EnvConstants = require('../utils/EnvConstants');
 const HomePage = require('../pages/HomePage');
 const LoginPage = require('../pages/LoginPage');
 const AccountPage = require('../pages/AccountPage');
-/*
+
 describe('UI tests (automationpractice.com)', () => {
     let driver;
 
     beforeAll( async () => {
+        jest.setTimeout(30000);
         driver = DriverFactory.createDriver(EnvConstants.browser, {});
         await driver.get(EnvConstants.ui_base_url, 10000);
-    },10000);
+    },30000);
 
     test('Successful login', async () => {
 
@@ -34,7 +35,5 @@ describe('UI tests (automationpractice.com)', () => {
 
     afterAll(async () => {
         await driver.quit();
-    },10000);
+    },30000);
 });
-
-*/

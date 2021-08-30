@@ -44,7 +44,7 @@ class BasePage {
     }
 
     async getElementByXpath(xPath) {
-       let element = await this.driver.wait(until.elementLocated(By.xpath(xPath)), 15000);
+       let element = await this.driver.wait(until.elementLocated(By.xpath(xPath)), 30000);
        return element;
     }
 
